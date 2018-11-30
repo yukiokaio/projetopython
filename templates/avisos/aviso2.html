@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block t %}
+<h1>Aviso</h1>
+{% endblock %}
+
+{% block body %}
+<h2>O código já existe em nosso banco de dados. Tente novamente.</h2>
+<form action="{{url_for('index')}}" method="GET">
+        <input class="btn btn-outline-secondary" type="submit" value="Home">
+</form>
+{% endblock %}

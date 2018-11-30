@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block t %}
+<h1>Visualização dos Jogos</h1>
+{% endblock %}
+
+{% block body %}
+<h2>Listando Jogos</h2>
+<table >
+	<tr>
+		<th>CÓDIGO</th>
+		<th>NOME DO JOGO</th>
+		<th>DESENVOLVEDOR(A) </th>
+		<th>ANO DE LANÇAMENTO </th>
+		<th>NOTA </th>
+		<th>VALOR (R$)</th>
+	</tr>
+	{%for jogo in jogos%}
+		<tr>
+			<td>{{jogo.codigo}}</td>
+			<td>{{jogo.nome}}</td>
+			<td>{{jogo.desenvolvedor}}</td>
+			<td>{{jogo.ano}}</td>
+			<td>{{jogo.nota}}</td>
+			<td>{{jogo.valor}}</td>
+			
+		</tr>
+	{% endfor %} 
+	<tr>
+		<th>TOTAL:</th>
+		<th>{{cont}}</th>
+		<th>{{cont}}</th>
+		<th>{{cont}}</th>
+		<th>{{totalN}}</th>
+		<th>{{totalV}}</th>
+	</tr>
+</table>
+{% endblock %}

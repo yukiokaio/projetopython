@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block t %}
+<h1>Sobre o Criador</h1>
+{% endblock %}
+
+{% block body %}
+<h2>Informações</h2>
+<h3>Nome: Kaio Yukio</h3>
+<h3>Cidade atual: São Luís - MA</h3>
+<h3>Curso: Ciência da Computação, UFMA</h3>
+<h3>Divirta-se ao imergir no mundo de Alicization!</h3>
+
+<form action="{{url_for('index')}}" method="GET">
+    <input class="btn btn-outline-secondary" type="submit" value="Home">
+</form>
+{% endblock %}

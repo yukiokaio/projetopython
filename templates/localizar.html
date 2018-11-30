@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block t %}
+<h1>Localizar Jogos</h1>
+{% endblock %}
+
+{% block body %}
+<h2>Localizando Jogo</h2>
+<form action="{{url_for('localizar')}}" method="POST">
+<table>
+        <tr>
+        	<td>Código do jogo a ser localizado</td>
+            <td><input type="text" name="codigo"></td>
+        </tr>       
+</table>
+	<input class="btn btn-outline-secondary" type="submit" value="Localizar"><br>
+</form>
+<h2>Lista de dados do Jogo</h2>
+<table >
+	<tr>
+		<th>CÓDIGO</th>
+		<th>NOME DO JOGO</th>
+		<th>DESENVOLVEDOR(A) </th>
+		<th>ANO DE LANÇAMENTO </th>
+		<th>NOTA </th>
+		<th>VALOR (R$)</th>
+	</tr>
+	
+	<tr>
+		<td>{{jogo.codigo}}</td>
+		<td>{{jogo.nome}}</td>
+		<td>{{jogo.desenvolvedor}}</td>
+		<td>{{jogo.ano}}</td>
+		<td>{{jogo.nota}}</td>
+		<td>{{jogo.valor}}</td>
+	</tr>
+</table>
+
+<form action="{{url_for('index')}}" method="GET">
+    <input class="btn btn-outline-secondary" type="submit" value="Home">
+</form>
+{% endblock %}
